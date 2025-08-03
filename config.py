@@ -10,13 +10,13 @@ class Config:
     # إعدادات الإعلانات
     ADSTERRA_ADS = {
         1: {
-            "url": "https://www.profitableratecpm.com/u59nbgqv?key=ca64d9af54ff14ecb858b7fef7562b6b",
+            "url": f"https://www.profitableratecpm.com/u59nbgqv?key={os.getenv('ADSTERRA_ADS_KEY_1')}",
             "title": "إعلان Adsterra المميز",
             "reward": 3,
             "cooldown": 24
         },
         2: {
-            "url": "https://www.profitableratecpm.com/fc0e90z0?key=da338f12e6c8e1219f1ed0ad057ea6b5",
+            "url": f"https://www.profitableratecpm.com/u59nbgqv?key={os.getenv('ADSTERRA_ADS_KEY_2')}",
             "title": "إعلان Adsterra العادي",
             "reward": 2,
             "cooldown": 12
