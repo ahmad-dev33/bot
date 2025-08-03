@@ -13,17 +13,14 @@ from telegram.ext import (
 from config import Config
 import database as db
 import os
-from flask import Flask
-from threading import Thread
+import asyncio
 
+async def run_bot():
+    application = Application.builder().token(os.getenv('BOT_TOKEN')).build()
+    await application.run_polling()
 
-app = Flask(__name__)
-
-@app.route('/')
-def home():
-    return "Bot is alive!"
-
-Thread(target=lambda: app.run(host='0.0.0.0', port=8080)).start()
+if __name__ == "__main__":
+    asyncio.run(run_bot())
 
 # إعداد التسجيل
 logging.basicConfig(
